@@ -28,11 +28,11 @@ public class ControlFlowExercises {
 //        System.out.println();
 //
 //        //1b.3
-//        int squared = 2;
+//        long squared = 2;
 //        do {
 //            System.out.println(squared);
 //            squared = (int) Math.pow(squared, 2);
-//        } while(squared < 1000000);
+//        } while(squared < 1_000_000);
 //
 //        //1c
 //        for (int j = 0; j <= 100; j+=2 ){
@@ -44,19 +44,19 @@ public class ControlFlowExercises {
 //        }
 //        System.out.println();
 //
-//        //2
-//        for (int l = 0; l <= 100; l++){
-//            if (l % 3 == 0 && l % 5 == 0){
-//                System.out.print("FizzBuzz ");
-//            } else if (l % 3 == 0){
-//                System.out.print("Fizz ");
-//            } else if (l % 5 == 0){
-//                System.out.print("Buzz ");
-//            } else {
-//                System.out.print(l + " ");
-//            }
-//        }
-//        System.out.println();
+        //2
+        for (int l = 0; l <= 100; l++){
+            if (l % 15 == 0){
+                System.out.print("FizzBuzz ");
+            } else if (l % 3 == 0){
+                System.out.print("Fizz ");
+            } else if (l % 5 == 0){
+                System.out.print("Buzz ");
+            } else {
+                System.out.print(l + " ");
+            }
+        }
+        System.out.println();
 
         //3
         Scanner sc = new Scanner(System.in);

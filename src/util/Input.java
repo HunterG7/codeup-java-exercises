@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Input {
     private Scanner scanner;
-    public Input(Scanner scanner) {
-        this.scanner = scanner;
+    public Input() {
+        this.scanner = new Scanner(System.in);
     }
     public Scanner getScanner() {
         return scanner;
@@ -15,13 +15,11 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Give me a string: ");
         return scanner.nextLine();
     }
 
     public boolean yesNo(){
-        System.out.println("Would you like to make another Circle? [y/N]");
-        String userYesNo =  scanner.nextLine();
+        String userYesNo = scanner.nextLine();
         return userYesNo.equalsIgnoreCase("y") ||
                userYesNo.equalsIgnoreCase("yes") ||
                userYesNo.equalsIgnoreCase("true") ||
@@ -40,7 +38,6 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Please enter an integer.");
         String userIntStr = scanner.nextLine();
         return Integer.parseInt(userIntStr);
     }

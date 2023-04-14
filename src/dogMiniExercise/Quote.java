@@ -1,4 +1,4 @@
-package DogMiniExercise;
+package dogMiniExercise;
 
 public class Quote {
     public static String randomQuote(){

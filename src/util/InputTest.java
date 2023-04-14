@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class InputTest {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Input input = new Input(scanner);
+        Input input = new Input();
 
         System.out.println(input.getString());
         System.out.println(input.yesNo());

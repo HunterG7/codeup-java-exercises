@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class CircleApp {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Input input =  new Input(sc);
+        Input input =  new Input();
 
         long circleCount = 0;
         boolean choice;
@@ -26,4 +25,5 @@ public class CircleApp {
             System.out.printf("Thank you! You created %s circles.", circleCount);
         }
     }
+
 }

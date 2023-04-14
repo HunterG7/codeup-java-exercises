@@ -1,4 +1,4 @@
-package DogMiniExercise;
+package dogMiniExercise;
 
 public class DogPark {
     public static void main(String[] args) {

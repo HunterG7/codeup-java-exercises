@@ -1,4 +1,4 @@
-package DogMiniExercise;
+package dogMiniExercise;
 
 public class Dog {
     private String name;

@@ -23,7 +23,8 @@ public class MoviesApplication {
                 3 - view movies in the drama category
                 4 - view movies in the horror category
                 5 - view movies in the sci-fi category
-                6 - add a movie
+                6 - view movies in a custom category
+                7 - add a movie
                 
                 Enter Your Choice:
                 """);
@@ -41,9 +42,14 @@ public class MoviesApplication {
             case 3 -> printMoviesByCategory(allMovies, "drama");
             case 4 -> printMoviesByCategory(allMovies, "horror");
             case 5 -> printMoviesByCategory(allMovies, "scifi");
-            case 6 -> addMovie(allMovies);
+            case 6 -> {
+                System.out.println("Which category of movies would you like to view?");
+                String userCategory = input.getString();
+                printMoviesByCategory(allMovies, userCategory);
+            }
+            case 7 -> addMovie(allMovies);
             default -> {
-                System.out.println("That is no a valid choice.");
+                System.out.println("That is not a valid choice.");
                 movieOptions(allMovies);
             }
         }
@@ -51,11 +57,9 @@ public class MoviesApplication {
 
     // displays movies based on category of movie picked
     public static void printMoviesByCategory(Movie[] allMovies, String category) {
-        System.out.println("Here are all the " + category + " movies:");
+        System.out.printf("Here are all the movies in the \"%s\" category:%n", category);
         for (Movie movie : allMovies) {
-            if (movie.getCategory().equalsIgnoreCase(category)) {
-                System.out.println(movie.getName());
-            }
+            if (movie.getCategory().equalsIgnoreCase(category)) System.out.println(movie.getName());
         }
         System.out.println("------------------------");
         movieOptions(allMovies);
@@ -83,6 +87,8 @@ public class MoviesApplication {
         updatedMovies[allMovies.length] = newMovie;
 
         allMovies = updatedMovies;
+        System.out.println("Your movie was successfully added!");
+        System.out.println("------------------------");
         movieOptions(allMovies);
     }
 

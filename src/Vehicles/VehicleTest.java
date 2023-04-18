@@ -1,15 +1,19 @@
 package Vehicles;
 
 public class VehicleTest {
+    public static void whichNoise(Vehicle vehicle){
+        System.out.println(vehicle.makeNoise());
+    }
     public static void main(String[] args) {
-        Vehicle vehicle1 = new Vehicle();
-        vehicle1.setName("Truck");
-        String vehicle1Noise = vehicle1.makeNoise();
-        System.out.println(vehicle1.getName() + " goes " + vehicle1Noise);
+      Garage garage = new Garage();
+      garage.vehicles[0] = new Motorcycle();
+      garage.vehicles[1] = new Car();
+      garage.vehicles[2] = new Vehicle();
 
-        Motorcycle motorcycle1 = new Motorcycle();
-        motorcycle1.setName("Harley");
-        String motorcycle1Noise = motorcycle1.makeNoise();
-        System.out.println(motorcycle1.getName() + " goes " + motorcycle1Noise);
+      garage.alarmCascade();
+
+
+
+
     }
 }
